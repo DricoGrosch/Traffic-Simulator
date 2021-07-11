@@ -11,12 +11,7 @@ import br.udesc.dsd.rmts.controller.IMeshController;
 import br.udesc.dsd.rmts.controller.MeshController;
 import br.udesc.dsd.rmts.controller.observer.*;
 
-/**
- * MainFrame class, where the simulation appears
- *
- * @author João Pedro Schmitz, Mário Fronza
- * @version 1.0.0
- */
+
 public class MainFrame extends JFrame implements Observer {
 
     private static final long serialVersionUID = 1L;

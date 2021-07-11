@@ -7,12 +7,7 @@ import java.util.*;
 import java.util.concurrent.Semaphore;
 import java.util.concurrent.TimeUnit;
 
-/**
- * Car thread class
- *
- * @author João Pedro Schmitz, Mário Fronza
- * @version 1.0.0
- */
+
 public class Car implements Runnable {
 
     private Queue<RoadItem> route;
@@ -24,11 +19,10 @@ public class Car implements Runnable {
     private Random random;
     private RoadItem currentRoad;
     private IMeshController meshController;
-    private String color;
     private int velocity;
     private int amountOfChoices;
 
-    public Car(int type) {
+    public Car() {
         this.route = new LinkedList<>();
         this.meshController = MeshController.getInstance();
         this.matrix = meshController.getMatrix();
@@ -39,17 +33,6 @@ public class Car implements Runnable {
         this.random = new Random();
         this.velocity = random.nextInt(100) + 200;
 
-        switch (type) {
-            case 0:
-                this.color = "red";
-                break;
-            case 1:
-                this.color = "blue";
-                break;
-            case 2:
-                this.color = "green";
-                break;
-        }
     }
 
     @Override
@@ -220,9 +203,6 @@ public class Car implements Runnable {
 
     }
 
-    public String getColor() {
-        return color;
-    }
 
     public RoadItem getCurrentRoad() {
         return currentRoad;

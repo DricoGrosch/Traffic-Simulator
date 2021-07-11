@@ -4,12 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.Semaphore;
 
-/**
- * Road item abstract class
- *
- * @author João Pedro Schmitz, Mário Fronza
- * @version 1.0.0
- */
+
 public abstract class RoadItem {
 
     protected Semaphore semaphore;
@@ -37,54 +32,15 @@ public abstract class RoadItem {
 
     public abstract void removeCar();
 
-    public void setImageByDirection() {
+    public void setCarImage() {
         if (direction > 4) {
             setImagePath("assets/stone.png");
-            if (direction == 5)
-                setImagePath("assets/" + car.getColor() + "car" + 1 + ".png");
-
-            if (direction == 6)
-                setImagePath("assets/" + car.getColor() + "car" + 2 + ".png");
-
-            if (direction == 7)
-                setImagePath("assets/" + car.getColor() + "car" + 3 + ".png");
-
-            if (direction == 8)
-                setImagePath("assets/" + car.getColor() + "car" + 4 + ".png");
-
-            if (direction == 9) {
-                if (car.getCurrentRoad().getDirection() <= 4) {
-                    setImagePath("assets/" + car.getColor() + "car" + 1 + ".png");
-                } else {
-                    setImagePath("assets/" + car.getColor() + "car" + 2 + ".png");
-                }
+            if (direction >= 5) {
+                setImagePath("assets/car.png");
             }
 
-            if (direction == 10) {
-                if (car.getCurrentRoad().getDirection() <= 4) {
-                    setImagePath("assets/" + car.getColor() + "car" + 4 + ".png");
-                } else {
-                    setImagePath("assets/" + car.getColor() + "car" + 1 + ".png");
-                }
-            }
-
-            if (direction == 11) {
-                if (car.getCurrentRoad().getDirection() <= 4) {
-                    setImagePath("assets/" + car.getColor() + "car" + 2 + ".png");
-                } else {
-                    setImagePath("assets/" + car.getColor() + "car" + 3 + ".png");
-                }
-            }
-
-            if (direction == 12) {
-                if (car.getCurrentRoad().getDirection() <= 4) {
-                    setImagePath("assets/" + car.getColor() + "car" + 3 + ".png");
-                } else {
-                    setImagePath("assets/" + car.getColor() + "car" + 4 + ".png");
-                }
-            }
         } else {
-            setImagePath("assets/" + car.getColor() + "car" + this.direction + ".png");
+            setImagePath("assets/car.png");
         }
     }
 

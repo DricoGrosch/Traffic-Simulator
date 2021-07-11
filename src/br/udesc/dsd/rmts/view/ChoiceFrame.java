@@ -17,12 +17,7 @@ import java.awt.event.WindowEvent;
 import javax.swing.*;
 import javax.swing.border.EmptyBorder;
 
-/**
- * Choice frame, where the user can select file and set other informations
- *
- * @author João Pedro Schmitz, Mário Fronza
- * @version 1.0.0
- */
+
 public class ChoiceFrame extends JFrame {
 
     private static final long serialVersionUID = 1L;

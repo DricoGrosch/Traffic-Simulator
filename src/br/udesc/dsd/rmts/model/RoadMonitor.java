@@ -3,12 +3,7 @@ package br.udesc.dsd.rmts.model;
 
 import java.util.concurrent.TimeUnit;
 
-/**
- * Road implementation with monitor
- *
- * @author João Pedro Schmitz, Mário Fronza
- * @version 1.0.0
- */
+
 public class RoadMonitor extends RoadItem {
 
 
@@ -38,7 +33,7 @@ public class RoadMonitor extends RoadItem {
                 wait();
             }
             super.car = car;
-            setImageByDirection();
+            setCarImage();
             notify();
         } catch (InterruptedException e) {
             e.printStackTrace();

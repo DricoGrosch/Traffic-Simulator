@@ -6,12 +6,7 @@ import br.udesc.dsd.rmts.controller.MeshController;
 import javax.swing.*;
 import java.io.File;
 
-/**
- * FileChooser implementation
- *
- * @author João Pedro Schmitz, Mário Fronza
- * @version 1.0.0
- */
+
 public class FileChooser extends JFileChooser {
 
 	private static final long serialVersionUID = 1L;

@@ -8,12 +8,7 @@ import java.util.concurrent.TimeUnit;
 import br.udesc.dsd.rmts.model.Car;
 import br.udesc.dsd.rmts.model.RoadItem;
 
-/**
- * Simulation thread
- *
- * @author João Pedro Schmitz, Mário Fronza
- * @version 1.0.0
- */
+
 public class Simulation extends Thread {
 
     private Queue<Car> cars;
@@ -86,16 +81,13 @@ public class Simulation extends Thread {
 
     public void addCar() {
         Random random = new Random();
-        int num = random.nextInt(3);
-        cars.add(new Car(num));
+        cars.add(new Car());
     }
 
     public void loadCarsInQueue() {
         Random random = new Random();
-        int num;
         for (int i = 0; i < this.meshController.getNumberOfCars(); i++) {
-            num = random.nextInt(3);
-            cars.add(new Car(num));
+            cars.add(new Car());
         }
     }
 

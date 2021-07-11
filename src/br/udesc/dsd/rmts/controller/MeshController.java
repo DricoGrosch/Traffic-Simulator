@@ -11,12 +11,7 @@ import java.util.*;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
-/**
- * Mesh controller, contains the simulation logic
- *
- * @author João Pedro Schmitz, Mário Fronza
- * @version 1.0.0
- */
+
 public class MeshController implements IMeshController {
 
     private static MeshController instance;

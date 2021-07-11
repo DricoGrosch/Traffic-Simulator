@@ -3,12 +3,7 @@ package br.udesc.dsd.rmts.model;
 import java.util.concurrent.Semaphore;
 import java.util.concurrent.TimeUnit;
 
-/**
- * Road implementation with semaphore
- *
- * @author João Pedro Schmitz, Mário Fronza
- * @version 1.0.0
- */
+
 public class RoadSemaphore extends RoadItem {
 
     private Semaphore mutex;
@@ -43,7 +38,7 @@ public class RoadSemaphore extends RoadItem {
             free.acquire();
             mutex.acquire();
             super.car = car;
-            setImageByDirection();
+            setCarImage();
         } catch (InterruptedException e) {
             e.printStackTrace();
         } finally {

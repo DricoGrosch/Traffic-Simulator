@@ -10,12 +10,7 @@ import java.util.List;
 import java.util.Queue;
 import java.util.concurrent.ExecutorService;
 
-/**
- * Controller interface
- *
- * @author João Pedro Schmitz, Mário Fronza
- * @version 1.0.0
- */
+
 public interface IMeshController extends Observed {
 
     void readAndCreateMatrix();
