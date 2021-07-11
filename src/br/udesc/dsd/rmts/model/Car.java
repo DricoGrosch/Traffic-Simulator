@@ -85,9 +85,7 @@ public class Car implements Runnable {
                         Queue<RoadItem> auxPositions = positions;
                         if (this.meshController.tryAcquire(positions)) {
                             free = true;
-                            System.out.println("vai");
                         } else {
-                            System.out.println("nao vai ");
                             free = false;
                             Thread.sleep(200 + rand.nextInt(400));
                         }
